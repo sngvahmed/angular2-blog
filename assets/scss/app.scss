@@ -1,4 +1,86 @@
-.is-awesome{
-    color: red;
+.body_class{
+    margin: 1px;
+    border-radius: 20px;
+}
+
+.html_class{
+  background: white;
+}
+
+.design_two{
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  )
+}
+
+.design_four {
+  color: black;
+  background: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.design_one {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  )
+}
+
+.logo {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#rotate_logo{
+  em {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vmin;
+    position: relative;
+    font-style: normal;
     font-weight: bold;
+    width: 2vmin;
+    text-align: center;
+  }
+
+  em.planet {
+    -webkit-animation: planet-rotate 2s linear infinite;
+    animation: planet-rotate 2s linear infinite;
+    position: relative;
+  }
+
+  em.planet.left {
+    -webkit-transform-origin: 3vmin 2vmin;
+    transform-origin: 3vmin 1vmin;
+  }
+
+  em.planet.right {
+    -webkit-transform-origin: -2vmin 1vmin;
+    transform-origin: -1vmin 1vmin;
+  }
+
+  @-webkit-keyframes planet-rotate {
+    to {
+      -webkit-transform: rotate(1turn);
+    }
+  }
+
+  @keyframes planet-rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 }

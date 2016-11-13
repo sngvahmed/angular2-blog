@@ -1,26 +1,30 @@
 <!doctype>
-<html>
+<html class="html_class">
 <head>
     <base href="/">
     <title>Angular 2 Boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Load libraries -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="node_modules/angular2/bundles/http.js"></script>
 
+    <!-- Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
 
-    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/common/assests/app.css">
 </head>
-<body>
-<my-app>Loading...</my-app>
+<body class="body_class ">
+  <div>
+    <admin-header class="col-md-2">loading</admin-header>
+    <my-app class="col-md-10"></my-app>
+  </div>
+
 
 <script>
     System.config({
@@ -31,7 +35,7 @@
             }
         }
     });
-    System.import('app/boot').then(null, console.error.bind(console));
+    System.import('app').catch(function(err){ console.error(err); });
 </script>
 </body>
 </html>

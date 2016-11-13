@@ -1,0 +1,40 @@
+.body_class{
+    margin: 15px;
+    background-color: #D7CCC8;
+}
+
+.html_class{
+  background: white;
+  background-color: #D7CCC8;
+}
+
+.design_two{
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  )
+}
+
+.design_four {
+  color: black;
+  background: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.design_one {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  )
+}

@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {CoursesService} from './courses.service'
 import {AutoGrowDirective} from '../common/auto-grow.directive'
 
@@ -12,15 +12,11 @@ import {AutoGrowDirective} from '../common/auto-grow.directive'
                </ul>
               `,
     providers: [CoursesService],
-    directives: [AutoGrowDirective]
+    // directives: [ AutoGrowDirective ]
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent {
     title: string;
     names: string[];
-
-    ngOnInit() {
-        this.title = "Fisrt angular 2 application ";
-    }
 
     constructor(coursesService: CoursesService) {
         this.names = coursesService.getName();

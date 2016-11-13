@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 
-var assetsDev = 'assets/';
 var assetsProd = 'src/';
 
 var appDev = 'dev/';
@@ -26,7 +25,7 @@ var imagemin = require('gulp-imagemin');
 var tsProject = typescript.createProject('tsconfig.json');
 
 gulp.task('build-css', function () {
-    return gulp.src(assetsDev + 'scss/*.scss')
+    return gulp.src(appDev + '**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(postcss([precss, autoprefixer, cssnano]))
         .pipe(sourcemaps.write())
@@ -44,7 +43,7 @@ gulp.task('build-ts', function () {
 });
 
 gulp.task('build-img', function () {
-    return gulp.src(assetsDev + 'img/**/*')
+    return gulp.src(appDev + 'img/**/*')
         .pipe(imagemin({
             progressive: true
         }))
@@ -52,14 +51,16 @@ gulp.task('build-img', function () {
 });
 
 gulp.task('build-html', function () {
+  debugger;
     return gulp.src(appDev + '**/*.html')
         .pipe(gulp.dest(appProd));
 });
 
 gulp.task('watch', function () {
     gulp.watch(appDev + '**/*.ts', ['build-ts']);
-    gulp.watch(assetsDev + 'scss/**/*.scss', ['build-css']);
-    gulp.watch(assetsDev + 'img/*', ['build-img']);
+    gulp.watch(appDev + '**/*.html', ['build-html']);
+    gulp.watch(appDev + '**/*.scss', ['build-css']);
+    gulp.watch(appDev + 'img/*', ['build-img']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css']);
+gulp.task('default', ['watch', 'build-ts', 'build-css' , 'build-html']);
