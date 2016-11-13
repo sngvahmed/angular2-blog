@@ -1,5 +1,6 @@
 <!doctype>
 <html class="html_class">
+
 <head>
     <base href="/">
     <title>Angular 2 Boilerplate</title>
@@ -19,23 +20,27 @@
 
     <link rel="stylesheet" href="src/css/common/assests/app.css">
 </head>
+
 <body class="body_class ">
-  <div>
-    <admin-header class="col-md-2">loading</admin-header>
-    <my-app class="col-md-10"></my-app>
-  </div>
+    <div class="center_row">
+        <admin-header class="col-md-2 admin_header">loading</admin-header>
+        <my-app class="col-md-10 admin_container"></my-app>
+    </div>
 
 
-<script>
-    System.config({
-        packages: {
-            app: {
-                format: 'register',
-                defaultExtension: 'js'
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
             }
-        }
-    });
-    System.import('app').catch(function(err){ console.error(err); });
-</script>
+        });
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+    </script>
 </body>
+
 </html>

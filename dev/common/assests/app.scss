@@ -1,40 +1,48 @@
-.body_class{
-    margin: 15px;
-    background-color: #D7CCC8;
+.body_class {
+    margin: 10px;
+    background: transparent;
+    margin-top: 30px;
 }
 
-.html_class{
-  background: white;
-  background-color: #D7CCC8;
+.html_class {
+    background: -webkit-repeating-linear-gradient(145deg, #222, #222 10px, #333 0, #333 100px)
 }
 
-.design_two{
-  background: repeating-linear-gradient(
-    -55deg,
-    #222,
-    #222 10px,
-    #333 10px,
-    #333 20px
-  )
+.admin_container {
+    background: rgba(74, 150, 173, 0.5);
+    height: 726px;
+    border-radius: 10px;
+    margin-left: 20;
+}
+
+.admin_header {
+    height: 720px;
+    background: rgba(246, 246, 246, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.center_row {
+    display: flex;
+    align-items: center;
+}
+
+.admin_container {
+    h1 {
+        color: white;
+    }
+}
+
+.design_two {
+    background: repeating-linear-gradient( -55deg, #222, #222 10px, #333 10px, #333 20px)
 }
 
 .design_four {
-  color: black;
-  background: repeating-linear-gradient(
-    to right,
-    #f6ba52,
-    #f6ba52 10px,
-    #ffd180 10px,
-    #ffd180 20px
-  );
+    color: white;
+    background: repeating-linear-gradient( to right, #f6ba52, #f6ba52 10px, #ffd180 10px, #ffd180 20px);
 }
 
 .design_one {
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 10px,
-    rgba(0, 0, 0, 0.3) 10px,
-    rgba(0, 0, 0, 0.3) 20px
-  )
+    background: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 10px, rgba(0, 0, 0, 0.3) 10px, rgba(0, 0, 0, 0.3) 20px)
 }
