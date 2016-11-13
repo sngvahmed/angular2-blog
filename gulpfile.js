@@ -24,7 +24,7 @@ var imagemin = require('gulp-imagemin');
 
 var tsProject = typescript.createProject('tsconfig.json');
 
-gulp.task('build-css', function () {
+gulp.task('build-css', function() {
     return gulp.src(appDev + '**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(postcss([precss, autoprefixer, cssnano]))
@@ -33,7 +33,7 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest(assetsProd + 'css/'));
 });
 
-gulp.task('build-ts', function () {
+gulp.task('build-ts', function() {
     return gulp.src(appDev + '**/*.ts')
         .pipe(sourcemaps.init())
         .pipe(typescript(tsProject))
@@ -42,25 +42,25 @@ gulp.task('build-ts', function () {
         .pipe(gulp.dest(appProd));
 });
 
-gulp.task('build-img', function () {
-    return gulp.src(appDev + 'img/**/*')
+gulp.task('build-img', function() {
+    return gulp.src(appDev + '**/icon/*')
         .pipe(imagemin({
             progressive: true
         }))
         .pipe(gulp.dest(assetsProd + 'img/'));
 });
 
-gulp.task('build-html', function () {
-  debugger;
+gulp.task('build-html', function() {
+    debugger;
     return gulp.src(appDev + '**/*.html')
         .pipe(gulp.dest(appProd));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
     gulp.watch(appDev + '**/*.ts', ['build-ts']);
     gulp.watch(appDev + '**/*.html', ['build-html']);
     gulp.watch(appDev + '**/*.scss', ['build-css']);
-    gulp.watch(appDev + 'img/*', ['build-img']);
+    gulp.watch(appDev + '**/icon/*', ['build-img']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css' , 'build-html']);
+gulp.task('default', ['watch', 'build-ts', 'build-css', 'build-html', 'build-img']);

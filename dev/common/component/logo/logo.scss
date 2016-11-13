@@ -1,45 +1,48 @@
-
 .logo {
-  color: white;
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  position: relative;
+    color: white;
+    margin-bottom: -9px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 em {
-  font-family: Josefin Sans,sans-serif;
-  font-size: 4vmin;
-  font-style: normal;
-  font-weight: 700;
-  width: 3vmin;
-  text-align: center;
+    font-family: serif;
+    font-style: normal;
+    font-weight: bold;
+    color: gold;
 }
 
 em.planet {
-  -webkit-animation: planet-rotate 2s linear infinite;
-  animation: planet-rotate 2s linear infinite;
-  position: relative;
+    -webkit-animation: planet-rotate 2s linear infinite;
+    animation: planet-rotate 2s linear infinite;
+    position: relative;
 }
 
 em.planet.left {
-  -webkit-transform-origin: 5vmin 2vmin;
-  transform-origin: 5vmin 2vmin;
+    -webkit-transform-origin: 8vmin 1vmin;
+    transform-origin: 8vmin 1vmin;
 }
 
 em.planet.right {
-  -webkit-transform-origin: -1.5vmin 2vmin;
-  transform-origin: -1.5vmin 2vmin;
+    -webkit-transform-origin: -7.5vmin 2vmin;
+    transform-origin: -7.5vmin 2vmin;
 }
 
 @-webkit-keyframes planet-rotate {
-  to {
-    -webkit-transform: rotate(1turn);
-  }
+    to {
+        -webkit-transform: skew(1turn);
+    }
 }
 
 @keyframes planet-rotate {
-  to {
-    transform: rotate(1turn);
-  }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px;
 }

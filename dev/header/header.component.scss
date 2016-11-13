@@ -1,0 +1,46 @@
+ .logo_background {
+     text-align: center;
+     height: 20%;
+     background: brown;
+     padding: 66px;
+ }
+ 
+ .wrapper {
+     perspective: 1000px;
+ }
+ 
+ .wrapper:hover .inner {
+     transform: rotate(0)
+ }
+ 
+ .inner {
+     transition: .3s;
+     transform: rotateY(40deg);
+ }
+ 
+ .logo_background {
+     h1,
+     h2,
+     h3 {
+         margin: 0px;
+     }
+ }
+ 
+ .nav-custom {
+     background: #333645;
+     height: 80%
+ }
+ 
+ .nav-custom {
+     h1,
+     h2,
+     h3,
+     p {
+         color: gold;
+         padding: 0;
+     }
+     .header-icon {
+         color: gold;
+         padding: 0px;
+     }
+ }
