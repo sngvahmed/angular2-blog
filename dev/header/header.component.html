@@ -1,12 +1,13 @@
-<div class="logo_background wrapper">
-    <div class="inner">
-        <logo></logo>
+<div class="logo-container">
+    <div class="logo_background wrapper">
+        <div class="inner">
+            <logo></logo>
+        </div>
     </div>
 </div>
-
 <ul class="nav nav-pills nav-stacked nav-custom">
-    <div>
-        <md-icon svgSrc="src/img/common/icon/home.svg" class="col-md-2 header-icon"></md-icon>
-        <p class="col-md-4">Home</p>
+    <div *ngFor="let item of headerItem" class="header_navbar" routerLink="/{{item.url}}">
+        <md-icon svgSrc="{{item.iconPath}}" class="col-md-2 header-icon"></md-icon>
+        <p class="col-md-4">{{item.name}}</p>
     </div>
 </ul>

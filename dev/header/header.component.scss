@@ -1,8 +1,39 @@
  .logo_background {
      text-align: center;
-     height: 20%;
+     height: 15%;
+     padding: 24px;
+     background: black;
+     border-radius: 2% 50%;
+     transition: all 3s;
+     width: 130px;
+     margin: auto;
+ }
+ 
+ .logo-container {
+     padding: 0;
      background: brown;
-     padding: 66px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     z-index: 1000;
+     box-shadow: 3px 3px 6px #000;
+     border-radius: 10px;
+     transform: scale(1.000000001);
+ }
+ 
+ .header_item {
+     float: left;
+ }
+ 
+ .header_navbar:hover {
+     -webkit-transition: all 1s;
+     transition: all 0.5s;
+     background: slategrey;
+ }
+ 
+ .header_navbar {
+     display: block;
+     float: left;
+     padding: 10px 0px 0px 10px;
  }
  
  .wrapper {
@@ -27,8 +58,8 @@
  }
  
  .nav-custom {
-     background: #333645;
-     height: 80%
+     background: #444;
+     height: 85%
  }
  
  .nav-custom {
